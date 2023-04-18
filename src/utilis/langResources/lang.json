@@ -1,0 +1,301 @@
+{
+    "en": {
+        "translation": {
+            "commons": {
+                "navigation": {
+                    "lists": {
+                        "home": "home",
+                        "explore": "explore",
+                        "notification": "notification",
+                        "messages": "messages",
+                        "bookmarks": "bookmarks",
+                        "lists": "lists",
+                        "profile": "profile",
+                        "setting": "setting"
+                    },
+                    "tweetBtn": "tweet"
+                },
+                "authentication": {
+                    "header": "are you new in twitter?",
+                    "subHeader": "login now to get your own timeline witch has your charectar",
+                    "requirments": "when you login you accept on all requirments and privacy policy.",
+                    "copyrights": "all copyrights for year 2023 for Twitter, Inc",
+                    "dialog": {
+                        "pass": "Password",
+                        "loginBtn": "Login",
+                        "registerBtn": "Register",
+                        "errFieldRequiredMsg": "This Field is Required",
+                        "login": {
+                            "header": "Login",
+                            "eou": "Email or Username",
+                            "forgetPass": "Forget Password"
+                        },
+                        "register": {
+                            "header": "Register",
+                            "step": "Step",
+                            "username": "Username",
+                            "email": "Email",
+                            "date": {
+                                "header": "Date of Birth",
+                                "year": "Year",
+                                "month": "Month",
+                                "day": "Day"
+                            },
+                            "nextBtn": "Next",
+                            "backBtn": "Back",
+                            "submit": "submit",
+                            "backToLogin": "Back To Login",
+                            "confPass": "Confirm Password",
+                            "tagName": "@Username"
+                        }
+                    }
+                },
+                "createTweet": {
+                    "placeholder": "what's happening?",
+                    "dialogHeader": "Create Tweet",
+                    "title": {
+                        "text": "text",
+                        "image": "image",
+                        "video": "video"
+                    },
+                    "textPlaceholder": "what's new?",
+                    "caption": "caption",
+                    "imageUpload": "Upload Your Image Below",
+                    "videoUpload": "Upload Your Video Below"
+                },
+                "tweet": {
+                    "more": {
+                        "edit": "Edit",
+                        "delete": "Delete",
+                        "bookmark": "Save in Bookmarks",
+                        "list": "Save in List",
+                        "report": "Report",
+                        "accDeleteMsg": "Are you sure that do you want delete this tweet?",
+                        "addBookmarkMsg": "you added this tweet to bookmarks",
+                        "errorBookmarkMsg": "you added this tweet before in your bookmarks"
+                    },
+                    "interactions": {
+                        "accRetweetMsg": "Are you sure, do you want to Retweet this tweet?",
+                        "accRetweetBtn": "Retweet",
+                        "title": {
+                            "like": "Like",
+                            "retweet": "Retweet",
+                            "comment": "Comment",
+                            "share": "Share"
+                        }
+                    }
+                }
+            },
+            "pages": {
+                "home": {
+                    "header": "home"
+                },
+                "trends": {
+                    "header": "Trends for you",
+                    "trending": "Trending",
+                    "similar": "people are Tweeting about this",
+                    "tweets": "Tweets",
+                    "search_label": "Search"
+                },
+                "explore": {
+                    "trends_header": "Trends",
+                    "trending_in": "Trending in Egypt",
+                    "tweets_tx": "Tweets"
+                },
+                "notification": {
+                    "header": "Notifications",
+                    "notFound": "Not Found Notifications",
+                    "tabs": {
+                        "all": "All",
+                        "verified": "Verified",
+                        "mentions": "Mentions"
+                    }
+                },
+                "messages": {
+                    "header": "Messages",
+                    "direcMsgPlaceholder": "Search Direct Messages",
+                    "notFoundDirecMsgs": "Not Found Direct Messages",
+                    "dialogDMHeader": "Add a New Direct Message",
+                    "dialogDMAdd": "Add",
+                    "dialogDMClose": "Close",
+                    "searchLabel": "Search for People",
+                    "errorDontSelectMsg": "Error: you should select a direct message then press add",
+                    "errorAddedBeforeMsg": "Error: you added this user before",
+                    "addedMsg": "you have been added a new direct message",
+                    "pleaseSelectDMMsg": "Please Select a Direct Message & Start Message your Friends",
+                    "sendMsgPlaceholder": "Start a new message"
+                },
+                "bookmarks": {
+                    "header": "Bookmarks",
+                    "notFoundMsg": "Bookmarks is Empty",
+                    "deleteTitle": "Delete"
+                },
+                "profile": {
+                    "editBtn": "Edit profile",
+                    "following": "Following",
+                    "followers": "Followers",
+                    "logoutBtn": "Logout"
+                },
+                "setting": {
+                    "header": "Setting",
+                    "darkMode": "Dark Mode",
+                    "lngTitle": "Languages",
+                    "notFound": "Not Found Notifications",
+                    "langs": {
+                        "en": "English",
+                        "ar": "Arabic"
+                    }
+                }
+            }
+        }
+    },
+    "ar": {
+        "translation": {
+            "commons": {
+                "navigation": {
+                    "lists": {
+                        "home": "الصفحة الرئيسية",
+                        "explore": "اكتشاف",
+                        "notification": "الاشعارات",
+                        "messages": "الرسائل",
+                        "bookmarks": "المحفوظات",
+                        "lists": "القوائم",
+                        "profile": "الصفحة الشخصية",
+                        "setting": "الاعدادات"
+                    },
+                    "tweetBtn": "غرد"
+                },
+                "authentication": {
+                    "header": "هل انت جديد في تويتر؟",
+                    "subHeader": "سجل الان لتحصل على الخط الزمني الخاص بك المناسب لاهتماماتك",
+                    "requirments": "عند تسجيلك انت توافق على الشروط الخاصبة بتويتر",
+                    "copyrights": "كل الحقوق محفوظة لدى شركة تويتر",
+                    "dialog": {
+                        "pass": "كلمة السر",
+                        "loginBtn": "تسجيل دخول",
+                        "registerBtn": "تسجيل",
+                        "errFieldRequiredMsg": "هذا الحقل اجباري",
+                        "login": {
+                            "header": "تسجيل دخول",
+                            "eou": "البريد الالكتروني او اسم المستخدم",
+                            "forgetPass": "نسيت كلمة المرور"
+                        },
+                        "register": {
+                            "header": "تسجيل",
+                            "step": "خطوة",
+                            "username": "اسم المستخدم",
+                            "email": "البريد الالكتروني",
+                            "date": {
+                                "header": "تاريخ الولادة",
+                                "year": "السنة",
+                                "month": "الشهر",
+                                "day": "اليوم"
+                            },
+                            "nextBtn": "التالي",
+                            "backBtn": "السابق",
+                            "submit": "ارسال",
+                            "backToLogin": "الرجوع الى تسجيل الدخول",
+                            "confPass": "تاكيد كلمة المرور",
+                            "tagName": "@اسم المستخدم"
+                        }
+                    }
+                },
+                "createTweet": {
+                    "placeholder": "ماذا يحدث؟",
+                    "dialogHeader": "انشئ تغريدة",
+                    "title": {
+                        "text": "تغريدة",
+                        "image": "صور",
+                        "video": "فيديو"
+                    },
+                    "textPlaceholder": "ما الجديد؟",
+                    "caption": "تعليق",
+                    "imageUpload": "ارفع الصورة الخاصة بك ادناه",
+                    "videoUpload": "ارفع الفيديو الخاصة بك ادناه"
+                },
+                "tweet": {
+                    "more": {
+                        "edit": "تعديل",
+                        "delete": "حذف",
+                        "bookmark": "حفظ في المراجع",
+                        "list": "حفظ في القائمة",
+                        "report": "تبليغ",
+                        "accDeleteMsg": "هل انت متاكد من حذفك لهذه التغريدة؟",
+                        "addBookmarkMsg": "لقد اضفت التغريدة في المراجع",
+                        "errorBookmarkMsg": "انت بالفعل قمت بحفظ هذه التغريدة في المراجع من قبل"
+                    },
+                    "interactions": {
+                        "accRetweetMsg": "هل انت متاكد من اعادتك لنشر هذه التغريدة؟",
+                        "accRetweetBtn": "انشر التغريدة",
+                        "title": {
+                            "like": "اعجاب",
+                            "retweet": "اعادة التغريدة",
+                            "comment": "تعليق",
+                            "share": "نشر"
+                        }
+                    }
+                }
+            },
+            "pages": {
+                "home": {
+                    "header": "الصفحة الرئيسية"
+                },
+                "trends": {
+                    "header": "المحتوى الشائع الذي يهمك",
+                    "trending": "Trending",
+                    "similar": "الاشخاص الذين غردوا مثل هذا",
+                    "tweets": "تغريدات",
+                    "search_label": "بحث"
+                },
+                "explore": {
+                    "trends_header": "المحتوى الشائع",
+                    "trending_in": "المحتوى الشائع في مصر",
+                    "tweets_tx": "تغريدات"
+                },
+                "notification": {
+                    "header": "الاشعارات",
+                    "notFound": "لا يوجد اي اشعارات",
+                    "tabs": {
+                        "all": "الكل",
+                        "verified": "المفعل",
+                        "mentions": "المشار الك"
+                    }
+                },
+                "messages": {
+                    "header": "الرسائل",
+                    "direcMsgPlaceholder": "ابحث عن الحادثات المباشرة",
+                    "notFoundDirecMsgs": "لا يوجد محادثات مباشرة",
+                    "dialogDMHeader": "اضف محادثة جديدة",
+                    "dialogDMAdd": "اضف",
+                    "dialogDMClose": "اغلق",
+                    "searchLabel": "ابحث عن الاشخاص",
+                    "errorDontSelectMsg": "يجب اختيار شخص اولا ثم الضغط على اضافة",
+                    "errorAddedBeforeMsg": "لقد قمت باضافة هذا الشخص من قبل بالفعل",
+                    "addedMsg": "لقد قمت باضافة محادثة مباشرة توا",
+                    "pleaseSelectDMMsg": "الرجاء اخيار محادثة مباشرة لتستطيع التحدث مع اصدقائك",
+                    "sendMsgPlaceholder": "ابدا يكتابة رسالتك"
+                },
+                "bookmarks": {
+                    "header": "المراجع",
+                    "notFoundMsg": "المراجع خالية",
+                    "deleteTitle": "حذف"
+                },
+                "profile": {
+                    "editBtn": "تعديل الملف الشخصي",
+                    "following": "الاشخاص الذين اتابعهم",
+                    "followers": "المتابعين",
+                    "logoutBtn": "تسجيل الخروج"
+                },
+                "setting": {
+                    "header": "الاعدادات",
+                    "darkMode": "الوضع الليلي",
+                    "lngTitle": "اللغات",
+                    "langs": {
+                        "en": "الانجليزية",
+                        "ar": "العربية"
+                    }
+                }
+            }
+        }
+    }
+}
