@@ -34,7 +34,7 @@ const Message = () => {
         <DirectMessages setSIdx={setSIdx} />
       </Box>
 
-      <Box flex={1} sx={{ display: { xs: isSelected ? 'block' : 'none', md: "block" } }}>
+      <Box className="chat-box" flex={1} sx={{ display: { xs: isSelected ? 'block' : 'none', md: "block" } }}>
         <MessageDisplay isSelected={isSelected} sIdx={sIdx} setSIdx={setSIdx} setisSelected={setisSelected} />
       </Box>
     </MessagesProvider>

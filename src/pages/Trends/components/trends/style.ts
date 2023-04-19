@@ -9,6 +9,10 @@ export const TrendsProvider = styled.div`
   margin: 1rem 0;
   border-radius: 1rem;
 
+  @media (max-width: 900px) {
+    display: none;
+  }
+
   .sub-trend {
     display: flex;
     flex-direction: column;

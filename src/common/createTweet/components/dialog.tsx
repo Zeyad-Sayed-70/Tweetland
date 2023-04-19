@@ -62,7 +62,7 @@ const CTweetDialog = ({ open, setOpen, text, setText }) => {
 	  <Dialog open={open} onClose={() => setOpen(false)}>
       <CTweetProvider>
         <DialogTitle>{t('commons.createTweet.dialogHeader')}</DialogTitle>
-        <DialogContent sx={{ width: '420px' }}>
+        <DialogContent sx={{ width: { sm: '420px' } }}>
           {typeNum === 0 && <TextType text={text} setText={setText}/>}
           {typeNum === 1 && <ImageType text={text} setText={setText} setFile={setFile} />}
           {typeNum === 2 && <VideoType text={text} setText={setText}/>}

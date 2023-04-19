@@ -76,7 +76,7 @@ const AddDirectMessageDialog = ({ open, setOpen }) => {
     <Dialog open={open}>
       <AddDirectMgsProvider>
         <DialogTitle>{t('pages.messages.dialogDMHeader')}</DialogTitle>
-        <DialogContent sx={{ height: 400, width: 400, maxWidth: '100%' }}>
+        <DialogContent sx={{ height: 400, width: {sm: 400}, maxWidth: '100%' }}>
           <Autocomplete
             disablePortal
             onChange={(e, val) => setSelected(val as SELECTEDUSER)}

@@ -12,6 +12,9 @@ export const MessageDisplayProvider = styled.div`
   .send-message {
     background-color: ${props => props.theme.bg_color_secondary};
     border-radius: 1rem;
+    margin: .5rem 1rem;
+    display: flex;
+    align-items: center;
     
     .send-btn {
       color: ${props => props.theme.primary_color};

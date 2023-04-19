@@ -35,4 +35,15 @@ export const MessagesProvider = styled.div`
     color: ${props => props.theme.tx_color_primary};
     font-weight: bold;
   }
+
+  @media (max-width: 900px) {
+    .chat-box {
+      position: fixed; 
+      width: 100%;
+      height: 100%; 
+      top: 0; 
+      z-index: 100;
+      background-color: ${props => props.theme.bg_color_primary};
+    }
+  }
 `;

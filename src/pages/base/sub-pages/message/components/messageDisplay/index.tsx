@@ -5,7 +5,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import SendIcon from '@mui/icons-material/Send';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { socket } from '../../../../../../utilis/socket.io';
 import { useGeneralContext } from '../../../../../../generalContext';
 import { useSelector } from 'react-redux';
@@ -33,8 +33,7 @@ const MessageDisplay = ({ setSIdx, sIdx, setisSelected, isSelected }) => {
   const dispatch = useDispatch<AppDispatch>();
   const { t } = useTranslation();
   const rid = `${data?._id + me?._id}`.split('').sort().join('');
-
-  console.log(rid)
+  const chatRef = useRef<HTMLDivElement>(null);
 
   const handleBack = () => {
     setSIdx(undefined);
@@ -43,7 +42,17 @@ const MessageDisplay = ({ setSIdx, sIdx, setisSelected, isSelected }) => {
     socket.emit('leave-room', rid);
   }
 
-  const handleAddMessage = () => {
+  const scrollDown = (behavior: 'auto' | 'smooth') => {
+    if ( !chatRef?.current ) return;
+
+    chatRef.current.scrollTo({ 
+      behavior,
+      top: 99999
+    })
+  }
+
+  const handleAddMessage = (ev) => {
+    ev.preventDefault();
     if ( messageText === '' || !me?._id ) return;
 
     // send message to socket server to real-time sending
@@ -67,6 +76,11 @@ const MessageDisplay = ({ setSIdx, sIdx, setisSelected, isSelected }) => {
 
     // clean input
     setMessageText('');
+
+    setTimeout(() => {
+      // scroll down
+      scrollDown('smooth');
+    }, 180)
   }
   
   useEffect(() => {
@@ -85,10 +99,14 @@ const MessageDisplay = ({ setSIdx, sIdx, setisSelected, isSelected }) => {
   }, [data])
   
   useEffect(() => {
+    // scroll down
+    scrollDown('auto');
+  }, [oldMessages])
+
+  useEffect(() => {
     socket.on('recive-message', (data: MESSAGE) => {
       const messages = [...currMessages, data];
       setCurrMessages(messages);
-      console.log(currMessages)
     })
 
     socket.on('clean-old-data', b => setCurrMessages([]));
@@ -122,26 +140,26 @@ const MessageDisplay = ({ setSIdx, sIdx, setisSelected, isSelected }) => {
         <IconButton sx={{ display: { xs: "block", md: "none" } }} onClick={handleBack}><KeyboardArrowLeftIcon /></IconButton>
         <IconButton sx={{ ml: 'auto' }}><InfoIcon /></IconButton>
       </Box>
-      <Stack flex={1} my={1} px={2} overflow='auto'>
-        {oldMessages.map((msg) => (
-          <Box className={`${msg.uid === me?._id ? 'my-message' : 'other-message'}`}>
+      <Stack ref={chatRef} flex={1} my={1} px={2} overflow='auto'>
+        {oldMessages.map((msg, ind) => (
+          <Box key={ind} className={`${msg.uid === me?._id ? 'my-message' : 'other-message'}`}>
             <span>{msg.username}</span>
             <Typography>{msg.message}</Typography>
           </Box>
         ))}
-        {currMessages.map(msg => (
-          <Box className={`${msg.uid === me?._id ? 'my-message' : 'other-message'}`}>
+        {currMessages.map((msg, ind) => (
+          <Box key={ind} className={`${msg.uid === me?._id ? 'my-message' : 'other-message'}`}>
             <span>{msg.username}</span>
             <Typography>{msg.message}</Typography>
           </Box>
         ))}
       </Stack>
-      <Box className="send-message" display="flex" alignItems='center'>
+      <form className="send-message" onSubmit={handleAddMessage}>
         <IconButton><AddPhotoAlternateIcon /></IconButton>
         <IconButton><EmojiEmotionsIcon /></IconButton>
         <InputBase value={messageText} onChange={(e) => setMessageText(e.target.value)} fullWidth type='text' placeholder={t('pages.messages.sendMsgPlaceholder') as string} />
         <IconButton className="send-btn" onClick={handleAddMessage}><SendIcon /></IconButton>
-      </Box>
+      </form>
     </MessageDisplayProvider>
   )
 }
