@@ -10,6 +10,13 @@ The MERN Twitter Clone will have several features including:
 
 - User authentication and authorization
 - User profile creation and editing
-- Tweet creation and deletion
+- Tweet creation, editing and deletion
 - Tweet liking and retwetting
 - Chating with Users
+- End-To-End Testing using Cypress
+- Switch Dark/Light Mode
+- Multible Languages (English - Arabic)
+
+> To see the source code go to **master branch**
+
+> Visit [Twitter-Clone](https://em-clone.netlify.app)
