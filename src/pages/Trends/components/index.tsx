@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 const Main = () => {
   return (
-    <Box p={2} sx={{ width: {md: 350, lg: 400}, height: '100%'}} >
+    <Box p={2} sx={{ width: {md: 350, xl: 400}, height: '100%'}} >
       <Search />
       <TrendsComp />
     </Box>

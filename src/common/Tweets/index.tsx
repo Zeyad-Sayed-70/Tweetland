@@ -9,6 +9,7 @@ import More from './components/more';
 import ImageTweet from './components/imageTweet';
 import Interactions from './components/interactions';
 import { useNavigate } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 const Tweet = ({data}) => {
   const { setMessageText, setIsMessageOpen } = useGeneralContext();
@@ -18,6 +19,7 @@ const Tweet = ({data}) => {
   const tweetRef = useRef<HTMLInputElement>(null);
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if ( !isLoading && isSuccess ) {
@@ -40,10 +42,12 @@ const Tweet = ({data}) => {
         onClick={() => { navigate(`/profile/${data?.creator_data.tagName}`) }}
         />
       <Stack gap={1} flex={1}>
-        <Box className='header' display='flex' alignItems='center' gap={1}>
-          <Typography fontSize={18} fontWeight={600}>{data.creator_data.username}</Typography>
-          <Typography fontSize={15} fontWeight={500}>{data.creator_data.tagName}</Typography>
-          <Typography fontSize={15} fontWeight={500}>. 3m</Typography>
+        <Box className='header' display='flex' alignItems='center' justifyContent='space-between'>
+          <Stack direction='row' alignItems='center' gap={1}>
+            <Typography fontSize={18} fontWeight={600}>{data.creator_data.username}</Typography>
+            <Typography fontSize={15} fontWeight={500}>{data.creator_data.tagName}</Typography>
+            <Typography fontSize={15} fontWeight={500}>. 3m</Typography>
+          </Stack>
           <More setEdit={setEdit} data={data}/>
         </Box>
 
@@ -58,7 +62,7 @@ const Tweet = ({data}) => {
         {data.type === "image" && <ImageTweet data={data} edit={edit} setEditedText={setEditedText} />}
         {/* {data.type === "video" && } */}
         
-        {edit && <Button sx={{ textTransform: 'capitalize' }} onClick={handleEditDone}>Done</Button>}
+        {edit && <Button sx={{ textTransform: 'capitalize' }} onClick={handleEditDone}>{t('commons.tweet.editDoneBtn')}</Button>}
 
         {!edit && <Interactions data={data} />}
       </Stack>

@@ -49,7 +49,7 @@ const More = ({setEdit, data}) => {
   }
   
   return (
-    <div style={{ marginLeft: 'auto' }}>
+    <div>
       <Button
         sx={{ minWidth: 50, p: 1 }}
         ref={anchorRef}

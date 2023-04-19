@@ -28,7 +28,7 @@ const Login = ({ setIsLogin, handleClose }) => {
 
   useEffect(() => {
     if ( isError ) {
-      return setErrMessage(errorData.message);
+      return setErrMessage(errorData?.message);
     }
     if ( isLoading || !isSuccess ) return;
     // clear error message

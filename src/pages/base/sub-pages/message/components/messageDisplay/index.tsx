@@ -32,12 +32,15 @@ const MessageDisplay = ({ setSIdx, sIdx, setisSelected, isSelected }) => {
   const { messagesData, isLoading, isSuccess } = useSelector((state: RootState) => state.gmsgs);
   const dispatch = useDispatch<AppDispatch>();
   const { t } = useTranslation();
+  const rid = `${data?._id + me?._id}`.split('').sort().join('');
+
+  console.log(rid)
 
   const handleBack = () => {
     setSIdx(undefined);
     setisSelected(false);
     sessionStorage.removeItem('selected-direct-message');
-    socket.emit('leave-room', data._id);
+    socket.emit('leave-room', rid);
   }
 
   const handleAddMessage = () => {
@@ -46,7 +49,7 @@ const MessageDisplay = ({ setSIdx, sIdx, setisSelected, isSelected }) => {
     // send message to socket server to real-time sending
     socket.emit('send-message', { 
       message: messageText, 
-      rid: data._id, 
+      rid,
       uid: me._id,
       username: me.username,
     });
@@ -77,7 +80,7 @@ const MessageDisplay = ({ setSIdx, sIdx, setisSelected, isSelected }) => {
       setisSelected(true);
     
       // join chat room
-      socket.emit('join-room', data._id);
+      socket.emit('join-room', rid);
     }
   }, [data])
   
@@ -85,6 +88,7 @@ const MessageDisplay = ({ setSIdx, sIdx, setisSelected, isSelected }) => {
     socket.on('recive-message', (data: MESSAGE) => {
       const messages = [...currMessages, data];
       setCurrMessages(messages);
+      console.log(currMessages)
     })
 
     socket.on('clean-old-data', b => setCurrMessages([]));

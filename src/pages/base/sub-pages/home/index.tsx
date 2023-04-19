@@ -73,7 +73,7 @@ const Home = () => {
       </Stack>
       <div ref={ref as MutableRefObject<null>}></div>
       {isLoading && <Typography className='loading'>Loading...</Typography>}
-      {(tweets?.length === 0 || !isLoading) && <Typography className='notfound'>Not Found Other Tweets</Typography>}
+      {(tweets?.length === 0 || !isLoading) && <Typography className='notfound'>{t('pages.home.notFoundMsg')}</Typography>}
     </HomeProvider>
   )
 }

@@ -82,7 +82,8 @@ const ProfileHead = ({ user }) => {
       <Stack direction='row' alignItems='center' justifyContent='space-between' px={2}>
         <Avatar sx={{ width: 100, height: 100, mt: -6 }} src="" alt="avatar" />
         <Stack direction='row' align-cnter='center' gap={2}>
-          <Button variant='contained'>{t('pages.profile.editBtn')}</Button>
+          { me?._id !== user?._id && <Button variant='contained'>{t('pages.profile.followBtn')}</Button>}
+          { me?._id === user?._id && <Button variant='contained'>{t('pages.profile.editBtn')}</Button>}
           { me?._id === user?._id && <Button variant='contained' color='error' onClick={handleLogout}>{t('pages.profile.logoutBtn')}</Button>}
         </Stack>
       </Stack>
@@ -110,6 +111,7 @@ const DisplayTweets = ({ isVisible, user }) => {
   const dispatch = useDispatch<AppDispatch>();
   const [tweetsData, setTweetsData] = useState<any[]>([]);
   const [skipTimes, setSkipTimes] = useState<number>(1);
+  const { t } = useTranslation();
 
   const token = localStorage.getItem('token') as string;
   let fetch_once = true;
@@ -148,7 +150,7 @@ const DisplayTweets = ({ isVisible, user }) => {
       ))}
     </Stack>
     {isLoading && <Typography className='loading'>Loading...</Typography>}
-    {(tweets?.length === 0 && !isLoading) && <Typography className='notfound'>Not Found Other Tweets</Typography>}
+    {(tweets?.length === 0 && !isLoading) && <Typography className='notfound'>{t('pages.home.notFoundMsg')}</Typography>}
   </>
 }
 export default Profile

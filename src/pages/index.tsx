@@ -27,7 +27,7 @@ const Layout = () => {
     <LayoutProvider>
       <Router>
         {/* <input type='file' onChange={handleSelect} /> */}
-        <Stack className='column-container' sx={{ width: { xs: '100%', lg: '400px' }, }}><NavigationSide /></Stack>
+        <Stack className='column-container' sx={{ width: { xs: '100%', lg: '350px' }, }}><NavigationSide /></Stack>
         <Stack className='column-container' sx={{ width: { xs: '100%', md: 'auto' }, flex: { md: 2 }, height: { xs: 'calc(100% - 66px)', lg: 'auto' }, order: { xs: 1, md: 0 } }}><Base /></Stack>
         <Stack className='column-container' sx={{ width: { xs: '100%', md: 'auto' } }}><Trends /></Stack>
       </Router>

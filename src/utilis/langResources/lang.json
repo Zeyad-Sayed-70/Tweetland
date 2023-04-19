@@ -64,6 +64,7 @@
                     "videoUpload": "Upload Your Video Below"
                 },
                 "tweet": {
+                    "editDoneBtn": "Done",
                     "more": {
                         "edit": "Edit",
                         "delete": "Delete",
@@ -88,7 +89,8 @@
             },
             "pages": {
                 "home": {
-                    "header": "home"
+                    "header": "home",
+                    "notFoundMsg": "Not Found Other Tweets"
                 },
                 "trends": {
                     "header": "Trends for you",
@@ -134,7 +136,9 @@
                     "editBtn": "Edit profile",
                     "following": "Following",
                     "followers": "Followers",
-                    "logoutBtn": "Logout"
+                    "logoutBtn": "Logout",
+                    "followBtn": "Follow",
+                    "notFoundMsg": "Not Found Other Tweets"
                 },
                 "setting": {
                     "header": "Setting",
@@ -214,6 +218,7 @@
                     "videoUpload": "ارفع الفيديو الخاصة بك ادناه"
                 },
                 "tweet": {
+                    "editDoneBtn": "تم",
                     "more": {
                         "edit": "تعديل",
                         "delete": "حذف",
@@ -238,7 +243,8 @@
             },
             "pages": {
                 "home": {
-                    "header": "الصفحة الرئيسية"
+                    "header": "الصفحة الرئيسية",
+                    "notFoundMsg": "لا يوجد تغريدات اخرى"
                 },
                 "trends": {
                     "header": "المحتوى الشائع الذي يهمك",
@@ -284,7 +290,9 @@
                     "editBtn": "تعديل الملف الشخصي",
                     "following": "الاشخاص الذين اتابعهم",
                     "followers": "المتابعين",
-                    "logoutBtn": "تسجيل الخروج"
+                    "logoutBtn": "تسجيل الخروج",
+                    "followBtn": "متابعة",
+                    "notFoundMsg": "لا يوجد تغريدات اخرى"
                 },
                 "setting": {
                     "header": "الاعدادات",
