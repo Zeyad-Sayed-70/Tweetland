@@ -1,4 +1,4 @@
-# Twitter Clone Project
+# Tweetland Project
 
 The application will have one main user role: regular users that will be able to create profiles, post tweets, follow other users, like and comment on tweets, and edit their own profiles.
 
