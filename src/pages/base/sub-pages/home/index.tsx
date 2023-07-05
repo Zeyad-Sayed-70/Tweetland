@@ -73,7 +73,10 @@ const Home = () => {
       </Stack>
       <div ref={ref as MutableRefObject<null>}></div>
       {isLoading && <Typography className='loading'>Loading...</Typography>}
-      {(tweets?.length === 0 || !isLoading) && <Typography className='notfound'>{t('pages.home.notFoundMsg')}</Typography>}
+      {(tweets?.length === 0 || !isLoading) && isLogging ? 
+      <Typography className='notfound'>{t('pages.home.notFoundMsg')}</Typography> : 
+      <Typography className='notfound'>{t('pages.home.notAuthorized')}</Typography>
+      }
     </HomeProvider>
   )
 }

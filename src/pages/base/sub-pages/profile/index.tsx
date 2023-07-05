@@ -35,7 +35,7 @@ const Profile = () => {
   useEffect(() => {
     // Fetch user data
     const tagName = location.pathname.slice(location.pathname.indexOf("@"));
-
+    console.log(tagName)
     if (tagName) {
       dispatch(getUser({ token, tagName }))
     }

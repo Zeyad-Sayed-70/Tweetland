@@ -11,7 +11,7 @@ const GlobalThemeContext = createContext<GlobalContentType>({
     setThemeMode: () => {},
 })
 
-export const useThemeContext = () => useContext(GlobalThemeContext); 
+export const useThemeContext = () => useContext(GlobalThemeContext);
 
 const ThemeContextProvider = ({children}) => {
   const [themeMode, setThemeMode] = useState<string>(mode);

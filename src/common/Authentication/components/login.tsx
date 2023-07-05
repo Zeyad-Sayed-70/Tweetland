@@ -19,6 +19,7 @@ export interface REQUEST_DATA {
   email?: string,
   username?: string
 }
+
 const Login = ({ setIsLogin, handleClose }) => {
   const { userData, errorData, isLoading, isSuccess, isError } = useSelector((state: RootState) => state.auth)
   const { t } = useTranslation();
@@ -54,6 +55,7 @@ const Login = ({ setIsLogin, handleClose }) => {
       
     disptach(login(request_data))
   }
+  
   return (
   <>
   <LoginProvider>
@@ -62,7 +64,7 @@ const Login = ({ setIsLogin, handleClose }) => {
       {t('commons.authentication.dialog.login.header')}
     </DialogTitle>
     <DialogTitle>
-      <IconButton className='close' onClick={handleClose}>x</IconButton>
+      <IconButton sx={{width: '40px', height: '40px'}} className='close' onClick={handleClose}>x</IconButton>
     </DialogTitle>
     </Box>
       <DialogContent className='content'>

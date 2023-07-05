@@ -23,6 +23,7 @@
                     "dialog": {
                         "pass": "Password",
                         "loginBtn": "Login",
+                        "guestBtn": "Join as Guest",
                         "registerBtn": "Register",
                         "errFieldRequiredMsg": "This Field is Required",
                         "login": {
@@ -90,14 +91,15 @@
             "pages": {
                 "home": {
                     "header": "home",
-                    "notFoundMsg": "Not Found Other Tweets"
+                    "notFoundMsg": "Not Found Other Tweets",
+                    "notAuthorized": "Not Authorized"
                 },
                 "trends": {
                     "header": "Trends for you",
                     "trending": "Trending",
                     "similar": "people are Tweeting about this",
                     "tweets": "Tweets",
-                    "search_label": "Search"
+                    "search_label": "Search on People"
                 },
                 "explore": {
                     "trends_header": "Trends",
@@ -177,6 +179,7 @@
                     "dialog": {
                         "pass": "كلمة السر",
                         "loginBtn": "تسجيل دخول",
+                        "guestBtn": "دخول كضيف",
                         "registerBtn": "تسجيل",
                         "errFieldRequiredMsg": "هذا الحقل اجباري",
                         "login": {
@@ -244,14 +247,15 @@
             "pages": {
                 "home": {
                     "header": "الصفحة الرئيسية",
-                    "notFoundMsg": "لا يوجد تغريدات اخرى"
+                    "notFoundMsg": "لا يوجد تغريدات اخرى",
+                    "notAuthorized": "غير مصرح, يجب تسجيل الدخول"
                 },
                 "trends": {
                     "header": "المحتوى الشائع الذي يهمك",
                     "trending": "Trending",
                     "similar": "الاشخاص الذين غردوا مثل هذا",
                     "tweets": "تغريدات",
-                    "search_label": "بحث"
+                    "search_label": "ابحث عن الاشخاص"
                 },
                 "explore": {
                     "trends_header": "المحتوى الشائع",

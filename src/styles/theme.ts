@@ -1,7 +1,7 @@
 import { lightTheme, darkTheme } from './themes/AppThemes';
 
 // Light / Dark Mode
-export let mode: string = JSON.parse(localStorage.getItem('theme') as string) || 'light';
+export let mode: string = JSON.parse(localStorage.getItem('theme') as string) || 'dark';
 
 // Object of Themes [Add a New Theme Here]
 const themes = {

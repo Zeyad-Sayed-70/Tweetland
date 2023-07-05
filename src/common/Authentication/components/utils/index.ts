@@ -7,3 +7,7 @@ export function register_func(userData, setCookie) {
         window.location.reload();
     }, 1000);
 }
+
+export function generateRandomId(_limit: number) {
+    return Math.floor(Math.random() * _limit);
+}

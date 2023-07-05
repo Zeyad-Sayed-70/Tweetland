@@ -13,6 +13,8 @@ import { useSelector } from 'react-redux'
 import { register_func } from './utils'
 import { useCookies } from 'react-cookie';
 import { useTranslation } from 'react-i18next'
+import { useThemeContext } from '../../../styles/themeContext'
+import { convertCompilerOptionsFromJson } from 'typescript'
 
 const Register = ({ setIsLogin, handleClose }) => {
   const { userData, errorData, isError, isLoading } = useSelector((state: RootState) => state.auth ) 
@@ -49,7 +51,7 @@ const Register = ({ setIsLogin, handleClose }) => {
             <DialogTitle>{t('commons.authentication.dialog.register.step')} {step+1}/{MAX_STEPS}</DialogTitle>
             <Typography sx={{ fontSize: '12px', color: '#d6362a' }}>{errorData?.data && errorData?.data?.message}</Typography>
             <DialogTitle>
-              <IconButton className='close' onClick={handleClose}>x</IconButton>
+              <IconButton sx={{width: '40px', height: '40px'}} className='close' onClick={handleClose}>x</IconButton>
             </DialogTitle>
           </Box>
         </Box>
@@ -70,6 +72,7 @@ const Register = ({ setIsLogin, handleClose }) => {
 const StepOne = ({ formData, setFormData, step, setStep }) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [birth, setBirth] = useState({year: '', month: '', day: ''});
+  const { themeMode } = useThemeContext();
   const { t } = useTranslation();
   const onNext = (data) => {
     setStep(step+1)
@@ -81,6 +84,7 @@ const StepOne = ({ formData, setFormData, step, setStep }) => {
       return newArr;
     })
   }
+  console.log(themeMode)
   return (
   <DialogContent>
     <form onSubmit={handleSubmit(onNext)}>
@@ -99,8 +103,9 @@ const StepOne = ({ formData, setFormData, step, setStep }) => {
         <Box display='flex' gap={1}>
           <FormControl sx={{ flex: 1 }}>
             <FormLabel>{t('commons.authentication.dialog.register.date.year')}</FormLabel>
-            <Select 
+            <Select
               id="demo-sample-select"
+              sx={{ color: themeMode === 'dark' ? 'white' : '#333' }}
               value={birth.year}
               {...register('year', { required: true })}
               onChange={(e) => setBirth({...birth, year: e.target.value})}
@@ -112,7 +117,8 @@ const StepOne = ({ formData, setFormData, step, setStep }) => {
           </FormControl>
           <FormControl sx={{ flex: 1 }}>
             <FormLabel>{t('commons.authentication.dialog.register.date.month')}</FormLabel>
-            <Select 
+            <Select
+              sx={{ color: themeMode === 'dark' ? 'white' : '#333' }}
               value={birth.month}
               {...register('month', { required: true })}
               onChange={(e) => setBirth({...birth, month: e.target.value})}
@@ -124,7 +130,8 @@ const StepOne = ({ formData, setFormData, step, setStep }) => {
           </FormControl>
           <FormControl sx={{ flex: 1 }}>
             <FormLabel>{t('commons.authentication.dialog.register.date.day')}</FormLabel>
-            <Select 
+            <Select
+              sx={{ color: themeMode === 'dark' ? 'white' : '#333' }}
               value={birth.day}
               {...register('day', { required: true })}
               onChange={(e) => setBirth({...birth, day: e.target.value})}
