@@ -29,8 +29,6 @@ const Bookmarks = () => {
   }, [])
   return (
     <BookmarksProvider>
-      {/* Redirect to home page if the user is not Logined  */}
-      <Redirect />
       <Stack className='main-header' direction='row' alignItems='center' justifyContent='space-between' sx={{ p: 2 }}>
         <Typography fontSize={20} fontWeight={600} textTransform='capitalize'>{t('pages.bookmarks.header')}</Typography>
         <Icon><BookmarkBorderIcon sx={{ color: '#179cf0' }} /></Icon>
