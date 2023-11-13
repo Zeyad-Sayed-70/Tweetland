@@ -21,6 +21,11 @@ app.use(bodyParser.json());
 app.use(methodOverride('_method'))
 app.use(cors());
 
+// Say welcome to / endpoint
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to my API!" });
+});
+
 let usersInRoom = [];
 
 // socket.io connection
